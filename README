@@ -1,0 +1,27 @@
+Jiaming Yu
+jiamingy@bu.edu
+Project Option: Userspace game using Qt
+
+Game: Snake
+
+Detailed instructions:
+qmake -project
+qmake
+make
+cp snake $WORKSPACE/rootfs/root/
+cp food.png $WORKSPACE/rootfs/root/
+cp back.png $WORKSPACE/rootfs/root/
+cp grass.png $WORKSPACE/rootfs/root/
+cp poison.png $WORKSPACE/rootfs/root/
+cd $WORKSPACE
+./rebuild-rootfs.sh
+./run-qemu-vnc.sh
+Enter root
+./snake -qws
+
+citations:
+https://doc.qt.io/archives/qt-4.8/gettingstartedqt.html
+https://stackoverflow.com/questions/15664218/pause-functionality-in-qt-using-qtimer-on-button-press
+https://doc.qt.io/archives/qt-4.8/qpainter.html
+https://doc.qt.io/qt-5/qkeyevent.html
+https://doc.qt.io/qt-5/qlist.html
