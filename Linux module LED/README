@@ -1,0 +1,29 @@
+Jiaming Yu
+jiamingy@bu.edu
+
+citations:
+http://ecos.sourceware.org/docs-3.0/ref/framebuf-colour.html
+https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch06s05.html
+https://learn.bu.edu/bbcswebdav/pid-7804917-dt-content-rid-38321145_1/courses/20sprgengec535_a1/Lab4.html
+
+Command:
+After running /run-qemu-vnc.sh ,enter and input root to login
+
+echo 0 > /sys/class/vtconsole/vtcon1/bind
+mknod /dev/mycounter
+insmod mycounter.ko
+
+And then we can implement write() by
+
+echo command > /dev/mycounter     //command includes up, down, go, stop, f1 to f9
+
+if echo different command, it would not change anything and printk the error message.
+
+Also, we can 
+cat /dev/mycounter
+to implement read()
+
+
+
+
+
